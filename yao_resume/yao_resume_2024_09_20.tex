@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,            % set paper size to letterpaper. change to a4paper for resumes outside of North America
+  top=0.5in,                        % specify top page margin
+  bottom=0.5in,                     % specify bottom page margin
+  left=0.5in,                       % specify left page margin
+  right=0.5in]{geometry}            % specify right page margin
+                       
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+\flushbottom                        % align text to the bottom of the page
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-9pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Daniel Yao}
+
+\vspace{5pt}
+
+% contact information
+\centerline{(608) 738-6047 | \href{mailto:dyao13@jh.edu}{dyao13@jh.edu} | \href{https://github.com/dyao13/}{github.com/dyao13}}
+
+\vspace{-9pt}
+
+% education section
+\section*{Education}
+\textbf{Johns Hopkins University} \hfill Baltimore, MD \\
+B.S. Applied Mathematics and Statistics, B.S. Biomedical Engineering \hfill Expected May 2027 \\
+4.00 GPA, 36 ACT, 1590 SAT
+
+\vspace{-9pt}
+
+% skills section
+\section*{Skills}
+\textbf{Languages:} Python, R, Julia, SQL, Node.js, Bash \\
+\textbf{Technologies:} pandas, NumPy, SciPy, scikit-learn, PyTorch, Matplotlib, ggplot2, Jupyter
+
+\vspace{-9pt}
+
+% experience section
+\section*{Experience}
+\textbf{Johns Hopkins University} \hfill Aug 2024 – Present \\
+\textit{Teaching Assistant} \vspace{-9pt} \\
+\begin{itemize}
+  \item Lead 30-student weekly recitation sections for upper-level EN.553.420 Probability
+\end{itemize}
+
+\textbf{McCallion Lab, Johns Hopkins Medicine} \hfill May 2024 – Present \\
+\textit{Undergraduate Research Assistant} \vspace{-9pt} \\
+\begin{itemize}
+  \item Edit iPS cells with CRISPR Del/Rei to investigate the role of cis-regulatory elements in Parkinson’s Disease
+  \item Analyze scRNA-Seq data with Seurat R package to study transcriptional differences in Parkinson’s-positive mice
+\end{itemize}
+
+\textbf{University of Wisconsin-La Crosse} \hfill Jun 2022 – Aug 2022 \\
+\textit{Research Intern} \vspace{-9pt} \\
+\begin{itemize}
+  \item Investigated the specific roles of CRF1 and CRF2 receptors in stress-induced increase in intestinal permeability
+  \item Assayed transcellular and paracellular flux through mucosa/submucosa tissue taken ex vivo from mice
+  \item Authored first draft of published abstract: \href{https://doi.org/10.1152/physiol.2024.39.S1.815}{doi.org/10.1152/physiol.2024.39.S1.815}
+\end{itemize}
+
+\vspace{-18.5pt}
+
+% projects section
+\section*{Projects}
+\textbf{Pediatric Sedation Assessment} | \href{https://github.com/dyao13/PedAccel}{github.com/dyao13/PedAccel} \hfill Aug 2024 - Present \vspace{-9pt} \\
+\begin{itemize}
+  \item Develop machine-learning model to calculate sedative dosages for pediatric critical-care patients
+  \item Extract heart-rate variability features from 250 Hz electrocardiogram data in time and frequency domains and analyze nonlinear features with Poincare maps using SciPy, Matplotlib, and neurokit in Python
+\end{itemize}
+
+\textbf{Brawl Stars Draft Engine} | \href{https://github.com/dyao13/BrawlStars}{github.com/dyao13/BrawlStars} \hfill Jul 2024 - Aug 2024 \vspace{-9pt} \\
+\begin{itemize}
+  \item Search for optimal draft of 3 picks out of 82 characters per team via minimax algorithm with alpha-beta pruning to yield a 12\% edge over human players in friendly matches
+  \item Optimize weights of individual and pairwise effects in SciPy to estimate win probability with 92\% accuracy
+  \item Scrape e-sports games using beautifulsoup4 in Python and log ranked games with BrawlStarsAPI in Node.js
+\end{itemize}
+
+\textbf{Patient Referral Scheduler} | \href{https://github.com/dyao13/RefMe}{github.com/dyao13/RefMe} \hfill Jul 2024 - Aug 2024 \vspace{-9pt} \\
+\begin{itemize}
+  \item Optimize scheduling of referrals into a hospital from a stochastic data stream to prioritize high-urgency patients 
+  \item Compute solutions via Monte Carlo methods and integer linear programming with lpSolveAPI in R to yield a 25\% improvement over a first-come-first-serve model
+  \item Parallelize across 10 clustered CPUs to improve runtime by 12000x compared to laptop performance
+\end{itemize}
+
+\textbf{ARTIS Over-the-Counter Hearing Aids} \hfill Jan 2024 - May 2024 \vspace{-9pt} \\
+\begin{itemize}
+  \item Develop mobile application to match patients to over-the-counter hearing aids backed by VC firm ARTIS
+  \item Train multiple regression model to map responses to a 25-component questionnaire to hearing aids in Python
+  \item Cluster and visualize audiometric profiles of 3000 NHHES participants with UMAP, DBSCAN, and ggplot2 in R
+\end{itemize}
+
+\vspace{-9pt}
+
+\end{document}
